@@ -1,0 +1,97 @@
+.container {
+  width: 90%;
+  position: relative;
+  /* text-align: right; */
+}
+
+.container-body {
+  position: absolute;
+  padding-left: 55%;
+}
+
+.content {
+  padding-bottom: 2rem;
+  animation-name: FadeOut;
+  /* animation-delay: 0.5s; */
+  animation-duration: 1.5s;
+  backface-visibility: hidden;
+}
+
+.content h4 {
+  color: rgb(207, 207, 207);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.title {
+  padding-bottom: 2.2rem;
+  margin-top: 2rem;
+  animation-name: moveInRight;
+  animation-duration: 1.1s;
+  animation-timing-function: ease-in;
+}
+.title h1 {
+  font-family: "Dancing Script", cursive;
+  color: rgb(233, 233, 233);
+  font-size: 6rem;
+  font-weight: lighter;
+
+  transition: 0.2s all ease-in;
+}
+
+h1:hover {
+  transform: skew(10deg);
+}
+
+.btn {
+  animation-name: FadeOut;
+  /* animation-delay: 0.5s; */
+  animation-duration: 1.5s;
+  backface-visibility: hidden;
+  /* animation-name: Grow;
+  animation-duration: 2s;
+  animation-delay: 1s; */
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  40% {
+    opacity: 0.4;
+    transform: translateY(0.3rem);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  65% {
+    opacity: 1;
+    transform: skew(10deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: skew(0deg);
+  }
+
+  90% {
+    opacity: 1;
+    transform: skew(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skew(0deg);
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,28 @@
+button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(207, 207, 207);
+  cursor: pointer;
+  padding: 6px;
+  transition: 0.2s all ease-out;
+  /* width: 2%; */
+}
+
+button:hover {
+  /* background-color: rgba(255, 255, 255, 0.89); */
+  /* border-radius: 1rem */
+  border-bottom: solid;
+  border-width: 0.2px;
+  /* color: black; */
+  transform: translateY(-0.2rem);
+  color: rgb(255, 255, 255);
+  /* text-decoration: underline; */
+}
+
+button:active {
+  border-radius: 1rem;
+  border-bottom: solid;
+  /* color: black; */
+  transform: translateY(0rem);
+}

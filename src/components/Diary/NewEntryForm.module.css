@@ -1,0 +1,17 @@
+.form-container {
+  width: 100%;
+
+  position: relative;
+  align-items: center;
+  /* padding-left: 50%; */
+}
+
+.form {
+  position: absolute;
+  background-color: rgba(151, 146, 146, 0.555);
+  width: 25rem;
+  height: 35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* left: 50%; */
+}
