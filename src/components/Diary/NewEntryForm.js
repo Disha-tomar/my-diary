@@ -19,7 +19,7 @@ const NewEntryForm = () => {
             ></textarea>
           </div>
           <div className={classes["button-container"]}>
-            <FormButton type="submit">Add</FormButton>
+            <FormButton type="submit">Save</FormButton>
             <FormButton>Cancel</FormButton>
           </div>
         </form>

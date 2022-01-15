@@ -1,0 +1,37 @@
+.diary-item-container {
+  width: 55%;
+  background-color: rgba(83, 83, 83, 0.555);
+  padding: 1.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  /* color: white; */
+}
+
+.date {
+  color: rgb(141, 141, 141);
+  font-weight: lighter;
+  border-bottom: solid;
+  border-width: 0.05rem;
+  border-color: rgb(116, 116, 116);
+  /* padding-bottom: 0.2rem; */
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.content {
+  text-align: justify;
+  text-justify: inter-word;
+  /* font-weight: lighter; */
+}
+
+.btn-container {
+  margin-top: 0.5rem;
+}
