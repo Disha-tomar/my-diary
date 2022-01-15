@@ -1,38 +1,46 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { diaryActions } from "../../store/diary-slice";
 import { uiActions } from "../../store/ui-slice";
 
-import classes from "./NewEntryForm.module.css";
+import classes from "./EditEntry.module.css";
 import FormButton from "../UI/FormButton";
 
-const NewEntryForm = () => {
+const EditEntry = () => {
+  const entry = useSelector((state) => state.diary.diaryItem);
+
   const dispatch = useDispatch();
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredContent, setEnteredContent] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState(entry.title);
+  const [enteredContent, setEnteredContent] = useState(entry.content);
 
   const addEntryHandler = (event) => {
     event.preventDefault();
     console.log(enteredTitle, enteredContent);
     dispatch(
-      diaryActions.addEntry({
-        id: Math.random(),
+      diaryActions.updateEntry({
+        id: entry.id,
+        date: entry.date,
         title: enteredTitle,
-        date: new Date().toDateString(),
+
         content: enteredContent,
       })
     );
-    setEnteredTitle("");
-    setEnteredContent("");
+
     dispatch(uiActions.showEntries());
   };
 
   const titleChangeHandler = (event) => {
+    event.preventDefault();
     setEnteredTitle(event.target.value);
+    console.log(enteredTitle);
   };
 
   const contentChangeHandler = (event) => {
     setEnteredContent(event.target.value);
+  };
+
+  const showEntriesHandler = () => {
+    dispatch(uiActions.showEntries());
   };
 
   return (
@@ -61,7 +69,7 @@ const NewEntryForm = () => {
           </div>
           <div className={classes["button-container"]}>
             <FormButton onClick={addEntryHandler}>Save</FormButton>
-            {/* <FormButton>Cancel</FormButton> */}
+            <FormButton onClick={showEntriesHandler}>Cancel</FormButton>
           </div>
         </form>
       </div>
@@ -69,4 +77,4 @@ const NewEntryForm = () => {
   );
 };
 
-export default NewEntryForm;
+export default EditEntry;

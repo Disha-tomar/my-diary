@@ -12,12 +12,20 @@ const NavigationBar = () => {
   const showHomePageHandler = () => {
     dispatch(uiActions.showHomePage());
   };
+
+  const showFormHandler = () => {
+    dispatch(uiActions.showForm());
+  };
+
   return (
     <header className={classes.header}>
       <nav>
         <ul>
           <li>
             <HomePageButton onClick={showHomePageHandler}>Home</HomePageButton>
+          </li>
+          <li>
+            <HomePageButton onClick={showFormHandler}>Add entry</HomePageButton>
           </li>
           <li>
             <HomePageButton onClick={showEntriesHandler}>

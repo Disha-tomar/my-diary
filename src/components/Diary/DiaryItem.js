@@ -1,13 +1,17 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import classes from "./DiaryItem.module.css";
 import FormButton from "../UI/FormButton";
 import { uiActions } from "../../store/ui-slice";
 import { diaryActions } from "../../store/diary-slice";
 
 const DiaryItem = (props) => {
+  const entry = useSelector((state) => state.diary.DiaryItem);
   const dispatch = useDispatch();
-  const showFormHandler = () => {
-    dispatch(uiActions.showForm());
+  const showEditFormHandler = () => {
+    dispatch(uiActions.showEditForm());
+    // for editing
+    dispatch(diaryActions.getEntry(props.id));
+    console.log(entry);
   };
 
   const deleteHandler = () => {
@@ -21,7 +25,7 @@ const DiaryItem = (props) => {
 
       <p className={classes.content}>{props.content}</p>
       <div className={classes["btn-container"]}>
-        <FormButton onClick={showFormHandler}>Edit</FormButton>
+        <FormButton onClick={showEditFormHandler}>Edit</FormButton>
         <FormButton onClick={deleteHandler}>Delete</FormButton>
       </div>
     </div>

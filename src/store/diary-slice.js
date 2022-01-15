@@ -5,6 +5,7 @@ const diarySlice = createSlice({
   initialState: {
     diaryList: [],
     diaryItem: {
+      date: "",
       title: "",
       content: "",
     },
@@ -20,6 +21,16 @@ const diarySlice = createSlice({
     },
     deleteEntry(state, action) {
       state.diaryList = state.diaryList.filter((el) => el.id != action.payload);
+    },
+    getEntry(state, action) {
+      state.diaryItem = state.diaryList.find((el) => el.id === action.payload);
+    },
+    clearEntry(state) {
+      state.diaryItem = {
+        date: "",
+        title: "",
+        content: "",
+      };
     },
   },
 });
