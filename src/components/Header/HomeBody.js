@@ -1,7 +1,14 @@
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui-slice";
+
 import classes from "./HomeBody.module.css";
 import HomePageButton from "../UI/HomePageButton";
 
 const HomeBody = () => {
+  const dispatch = useDispatch();
+  const showFormHandler = () => {
+    dispatch(uiActions.showForm());
+  };
   return (
     <section className={classes.container}>
       <div className={classes["container-body"]}>
@@ -15,7 +22,9 @@ const HomeBody = () => {
           </h4>{" "}
         </div>
         <div className={classes.btn}>
-          <HomePageButton>Get started &rarr;</HomePageButton>
+          <HomePageButton onClick={showFormHandler}>
+            Get started &rarr;
+          </HomePageButton>
         </div>
       </div>
     </section>
