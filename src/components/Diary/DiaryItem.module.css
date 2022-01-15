@@ -1,15 +1,18 @@
 .diary-item-container {
   width: 55%;
-  background-color: rgba(83, 83, 83, 0.555);
+  background-color: rgba(139, 139, 139, 0.555);
   padding: 1.5rem;
   display: block;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
+  animation-name: FadeOut;
+  animation-duration: 0.5s;
+  transition: all 0.2s;
   /* color: white; */
 }
 
 .date {
-  color: rgb(141, 141, 141);
+  color: rgb(54, 54, 54);
   font-weight: lighter;
   border-bottom: solid;
   border-width: 0.05rem;
@@ -34,4 +37,18 @@
 
 .btn-container {
   margin-top: 0.5rem;
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.diary-item-container:hover {
+  transform: scale(1.05);
+  background-color: rgba(211, 211, 211, 0.555);
 }

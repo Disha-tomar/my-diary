@@ -3,6 +3,8 @@
 
   position: relative;
   align-items: center;
+  animation-name: FadeOut;
+  animation-duration: 0.5s;
   /* padding-left: 50%; */
 }
 
@@ -56,4 +58,15 @@
   margin-top: 0.5rem;
   position: absolute;
   left: 2rem;
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
