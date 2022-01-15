@@ -11,15 +11,10 @@ const DiaryItem = (props) => {
 
   return (
     <div className={classes["diary-item-container"]}>
-      <div className={classes.date}>Sunday, 9 Jan 2022</div>
-      <div className={classes.title}>Title</div>
+      <div className={classes.date}>{props.date}</div>
+      <div className={classes.title}>{props.title}</div>
 
-      <p className={classes.content}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
-      </p>
+      <p className={classes.content}>{props.content}</p>
       <div className={classes["btn-container"]}>
         <FormButton onClick={showFormHandler}>Edit</FormButton>
         <FormButton>Delete</FormButton>

@@ -5,7 +5,8 @@ import NavigationBar from "./components/Header/NavigationBar";
 import HomeBody from "./components/Header/HomeBody";
 
 import NewEntryForm from "./components/Diary/NewEntryForm";
-import DiaryItem from "./components/Diary/DiaryItem";
+// import DiaryItem from "./components/Diary/DiaryItem";
+import DiaryItemList from "./components/Diary/DiaryItemList";
 
 function App() {
   const dispatch = useDispatch();
@@ -17,9 +18,7 @@ function App() {
       <NavigationBar />
       {showHome && <HomeBody />}
       {showForm && <NewEntryForm />}
-      {showEntries && <DiaryItem />}
-      {showEntries && <DiaryItem />}
-      {showEntries && <DiaryItem />}
+      {showEntries && <DiaryItemList />}
     </Fragment>
   );
 }

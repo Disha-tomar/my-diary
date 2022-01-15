@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { diaryActions } from "../../store/diary-slice";
+import { uiActions } from "../../store/ui-slice";
 
 import classes from "./NewEntryForm.module.css";
 import FormButton from "../UI/FormButton";
@@ -21,6 +22,9 @@ const NewEntryForm = () => {
         content: enteredContent,
       })
     );
+    setEnteredTitle("");
+    setEnteredContent("");
+    dispatch(uiActions.showEntries());
   };
 
   const titleChangeHandler = (event) => {
@@ -41,6 +45,7 @@ const NewEntryForm = () => {
               type="text"
               id="title"
               placeholder="Add Title here"
+              value={enteredTitle}
               onChange={titleChangeHandler}
             ></input>
           </div>
@@ -50,6 +55,7 @@ const NewEntryForm = () => {
               type="text"
               id="content"
               placeholder="Add Content here"
+              value={enteredContent}
               onChange={contentChangeHandler}
             ></textarea>
           </div>
