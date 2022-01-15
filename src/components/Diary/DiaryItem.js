@@ -1,7 +1,14 @@
+import { useDispatch } from "react-redux";
 import classes from "./DiaryItem.module.css";
 import FormButton from "../UI/FormButton";
+import { uiActions } from "../../store/ui-slice";
 
 const DiaryItem = (props) => {
+  const dispatch = useDispatch();
+  const showFormHandler = () => {
+    dispatch(uiActions.showForm());
+  };
+
   return (
     <div className={classes["diary-item-container"]}>
       <div className={classes.date}>Sunday, 9 Jan 2022</div>
@@ -14,7 +21,7 @@ const DiaryItem = (props) => {
         scrambled it to make a type specimen book.
       </p>
       <div className={classes["btn-container"]}>
-        <FormButton>Edit</FormButton>
+        <FormButton onClick={showFormHandler}>Edit</FormButton>
         <FormButton>Delete</FormButton>
       </div>
     </div>
