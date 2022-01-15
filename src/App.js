@@ -8,7 +8,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      {/* <NewEntryForm /> */}
+      <NewEntryForm />
     </Fragment>
   );
 }

@@ -1,0 +1,33 @@
+.btn {
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 6px;
+  transition: 0.2s all ease-out;
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  /* width: 2%; */
+}
+
+.btn:hover {
+  background-color: rgba(56, 56, 56, 0.829);
+  /* border-radius: 1rem */
+  /* border-bottom: solid;
+  border-width: 0.2px; */
+  /* color: black; */
+  transform: translateY(-0.2rem);
+  color: rgb(255, 255, 255);
+  /* box-shadow: 0 1rem 2rem rgba(#000, 1); */
+
+  /* text-decoration: underline; */
+}
+
+.btn:active {
+  border-radius: 1rem;
+  /* border-bottom: solid; */
+  /* color: black; */
+  transform: translateY(0rem);
+}

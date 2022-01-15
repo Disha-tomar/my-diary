@@ -1,4 +1,5 @@
 import classes from "./NewEntryForm.module.css";
+import FormButton from "../UI/FormButton";
 
 const NewEntryForm = () => {
   return (
@@ -6,16 +7,20 @@ const NewEntryForm = () => {
       <div className={classes["form"]}>
         <form>
           <div className={classes["form-row"]}>
-            <label htmlFor="title">Title</label>
-            <input type="text" id="title"></input>
+            <label htmlFor="title">Title:</label>
+            <input type="text" id="title" placeholder="Add Title here"></input>
           </div>
-          <div>
-            <label htmlFor="content">Content</label>
-            <input type="text" id="content"></input>
+          <div className={classes["form-row"]}>
+            <label htmlFor="content">Content:</label>
+            <textarea
+              type="text"
+              id="content"
+              placeholder="Add Content here"
+            ></textarea>
           </div>
-          <div>
-            <button type="submit">Add</button>
-            <button>Cancel</button>
+          <div className={classes["button-container"]}>
+            <FormButton type="submit">Add</FormButton>
+            <FormButton>Cancel</FormButton>
           </div>
         </form>
       </div>
