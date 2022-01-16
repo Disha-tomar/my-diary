@@ -6,10 +6,15 @@ import { uiActions } from "../../store/ui-slice";
 import classes from "./NewEntryForm.module.css";
 import FormButton from "../UI/FormButton";
 
+// import useLocalStorage from "../../hooks/useLocalStorage";
+
 const NewEntryForm = () => {
   const dispatch = useDispatch();
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredContent, setEnteredContent] = useState("");
+
+  // const [enteredTitle, setEnteredTitle] = useLocalStorage("title", "");
+  // const [enteredContent, setEnteredContent] = useLocalStorage("content", "");
 
   const addEntryHandler = (event) => {
     event.preventDefault();

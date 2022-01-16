@@ -1,9 +1,13 @@
 import DiaryItem from "./DiaryItem";
 import { useSelector } from "react-redux";
 import classes from "./DiaryItemList.module.css";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const DiaryItemList = () => {
   const entries = useSelector((state) => state.diary.diaryList);
+
+  const [entriesStorage, setEntriesStorage] = useLocalStorage("entry", entries);
+
   console.log(entries);
   let element;
 
@@ -23,7 +27,7 @@ const DiaryItemList = () => {
     );
   } else {
     element = (
-      <p className={classes["no-entries"]}>You have no entries to show</p>
+      <p className={classes["no-entries"]}>You have no entries to show..</p>
     );
   }
 
