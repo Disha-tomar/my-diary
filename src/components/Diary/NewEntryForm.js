@@ -40,6 +40,10 @@ const NewEntryForm = () => {
     setEnteredContent(event.target.value);
   };
 
+  const showEntriesHandler = () => {
+    dispatch(uiActions.showEntries());
+  };
+
   return (
     <section className={classes["form-container"]}>
       <div className={classes["form"]}>
@@ -66,7 +70,7 @@ const NewEntryForm = () => {
           </div>
           <div className={classes["button-container"]}>
             <FormButton onClick={addEntryHandler}>Save</FormButton>
-            {/* <FormButton>Cancel</FormButton> */}
+            <FormButton onClick={showEntriesHandler}>Cancel</FormButton>
           </div>
         </form>
       </div>
