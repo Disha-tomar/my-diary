@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 import classes from "./Navigation.module.css";
 import HomePageButton from "../UI/HomePageButton";
 import { uiActions } from "../../store/ui-slice";
@@ -29,11 +31,19 @@ const NavigationBar = () => {
           </li>
           <li>
             <HomePageButton onClick={showEntriesHandler}>
-              Your entries
+              My entries
             </HomePageButton>
           </li>
           <li>
-            <HomePageButton>Contact me</HomePageButton>
+            <Link
+              to="footer"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <HomePageButton>Contact</HomePageButton>
+            </Link>
           </li>
         </ul>
       </nav>
