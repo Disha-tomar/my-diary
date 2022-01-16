@@ -1,5 +1,19 @@
 .container {
   width: 100%;
+  /* align-items: center;
+  position: relative; */
 
   margin-left: 22%;
+}
+
+.no-entries {
+  position: absolute;
+  width: 50%;
+  margin-top: 5%;
+  left: 65%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: rgb(190, 190, 190);
+  font-weight: lighter;
+  /* margin-right: 5rem; */
 }

@@ -14,7 +14,7 @@ function App() {
   const showForm = useSelector((state) => state.ui.form);
   const showEntries = useSelector((state) => state.ui.entries);
   const showEditForm = useSelector((state) => state.ui.editMode);
-  const entries = useSelector((state) => state.diary.diaryList);
+  // const entries = useSelector((state) => state.diary.diaryList);
 
   return (
     <Fragment>
@@ -22,8 +22,8 @@ function App() {
       {showHome && <HomeBody />}
       {showForm && <NewEntryForm />}
       {showEditForm && <EditEntry />}
-      {entries && showEntries && <DiaryItemList />}
-      {!entries && showEntries && <p>You have no entry yet</p>}
+      {showEntries && <DiaryItemList />}
+
       <Footer />
     </Fragment>
   );

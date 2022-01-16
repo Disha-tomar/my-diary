@@ -30,5 +30,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-<img />;
