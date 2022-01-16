@@ -33,6 +33,7 @@
   text-align: justify;
   text-justify: inter-word;
   /* font-weight: lighter; */
+  white-space: pre-wrap;
 }
 
 .btn-container {

@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { Fragment } from "react";
 import NavigationBar from "./components/Header/NavigationBar";
@@ -7,6 +7,7 @@ import NewEntryForm from "./components/Diary/NewEntryForm";
 import EditEntry from "./components/Diary/EditEntry";
 // import DiaryItem from "./components/Diary/DiaryItem";
 import DiaryItemList from "./components/Diary/DiaryItemList";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const showHome = useSelector((state) => state.ui.homePage);
@@ -23,6 +24,7 @@ function App() {
       {showEditForm && <EditEntry />}
       {entries && showEntries && <DiaryItemList />}
       {!entries && showEntries && <p>You have no entry yet</p>}
+      <Footer />
     </Fragment>
   );
 }
