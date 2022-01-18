@@ -6,8 +6,6 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 const DiaryItemList = () => {
   const entries = useSelector((state) => state.diary.diaryList);
 
-  const [entriesStorage, setEntriesStorage] = useLocalStorage("entry", entries);
-
   console.log(entries);
   let element;
 

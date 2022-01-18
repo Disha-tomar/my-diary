@@ -3,7 +3,7 @@ import classes from "./DiaryItem.module.css";
 import FormButton from "../UI/FormButton";
 import { uiActions } from "../../store/ui-slice";
 import { diaryActions } from "../../store/diary-slice";
-import useLocalStorage from "../../hooks/useLocalStorage";
+
 
 const DiaryItem = (props) => {
   const entry = useSelector((state) => state.diary.DiaryItem);
